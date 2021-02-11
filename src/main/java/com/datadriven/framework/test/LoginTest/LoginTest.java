@@ -11,13 +11,10 @@ public class LoginTest extends BaseUI {
 	@Test
 	public void testOne() {
 		
-	    logger = report.createTest("Initializing the Browser");
+	    logger = report.createTest("Enter UserName and Password in Rediff");
 		invokeBrowser("chrome");
-		logger = report.createTest("Opening the Website");
 		openURL("websiteURL");
-		logger = report.createTest("Click Sign In Button");
 		elementClick("signinBtn_Xpath");
-		logger = report.createTest("Entering UserName And Password");
 		enterText("usernameInput_Id", "test");
 		enterText("passwordInput_Xpath", "Test123");	
 		//logger.log(Status.FAIL, "Test Execution Failed ");
@@ -34,7 +31,7 @@ public class LoginTest extends BaseUI {
 	}
 	
 
-	 //@Test
+	@Test
 	public void testTwo() {
 		logger = report.createTest("Open Rediff and Enter UserName");
 		invokeBrowser("chrome");

@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.datadriven.framework.test.LoginTest.LoginTest">
+      <class name="com.datadriven.framework.utils.TestDataProvider">
         <methods>
-          <include name="testOne"/>
-          <include name="endReport"/>
+          <include name="sampleTestOne"/>
         </methods>
-      </class> <!-- com.datadriven.framework.test.LoginTest.LoginTest -->
+      </class> <!-- com.datadriven.framework.utils.TestDataProvider -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -18,6 +18,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.asserts.SoftAssert;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -218,9 +219,28 @@ public class BaseUI  {
 		return false;		
 	}
 	
+	/****************** Assertion Functions ***********************/
+	
+	public void assertTrue(boolean flag) {
+	
+		softAssert.assertTrue(flag);
+	
+	}
+	
+	public void assertFalse(boolean flag) {
+		
+		softAssert.assertFalse(flag);
+	
+	}
+	
+	public void assertEquals(String actual, String expected) {
+		
+		softAssert.assertEquals(actual, expected);
+	
+	}
 	
 	
-	/****************** Report Failure ***********************/
+	/****************** Report Functions ***********************/
 	
 	public void reportFail(String reportString) {
 		logger.log(Status.FAIL, reportString);
@@ -230,6 +250,12 @@ public class BaseUI  {
 	
 	public void reportPass(String reportString) {
 		logger.log(Status.PASS, reportString);
+	}
+	
+	@AfterMethod
+	public void afterTest() {
+		softAssert.assertAll();
+		driver.quit();
 	}
 	
 	public void takeScreenShotOnFailure() {
