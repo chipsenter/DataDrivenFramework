@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>7/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Feb 10 18:18:01 MST 2021</td>
+<td>Started on:</td><td>Wed Feb 10 18:34:25 MST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1039 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (694 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,74 +67,47 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.datadriven.framework.utils.TestDataProvider.sampleTestOne()'><b>sampleTestOne</b><br>Test class: com.datadriven.framework.utils.TestDataProvider</td>
-<td><div><pre>org.testng.internal.reflect.MethodMatcherException: 
-[public void com.datadriven.framework.utils.TestDataProvider.sampleTestOne(java.lang.String,java.lang.String,java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
-Data provider mismatch
-Method: sampleTestOne([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}])
-Arguments: [(java.lang.String) TA2,(java.lang.String) TA2.1,(java.lang.String) TA2.2]
-	at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:43)
-	at org.testng.internal.Parameters.injectParameters(Parameters.java:905)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:34)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.testng.TestRunner.privateRun(TestRunner.java:764)
-	at org.testng.TestRunner.run(TestRunner.java:585)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.runSuites(TestNG.java:1069)
-	at org.testng.TestNG.run(TestNG.java:1037)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1449772539", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1449772539'><pre>org.testng.internal.reflect.MethodMatcherException: 
-[public void com.datadriven.framework.utils.TestDataProvider.sampleTestOne(java.lang.String,java.lang.String,java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
-Data provider mismatch
-Method: sampleTestOne([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}])
-Arguments: [(java.lang.String) TA2,(java.lang.String) TA2.1,(java.lang.String) TA2.2]
-	at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:43)
-	at org.testng.internal.Parameters.injectParameters(Parameters.java:905)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:34)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.testng.TestRunner.privateRun(TestRunner.java:764)
-	at org.testng.TestRunner.run(TestRunner.java:585)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.runSuites(TestNG.java:1069)
-	at org.testng.TestNG.run(TestNG.java:1037)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>1</td>
+<td title='com.datadriven.framework.utils.TestDataProvider.sampleTestOne()'><b>sampleTestOne</b><br>Test class: com.datadriven.framework.utils.TestDataProvider<br>Parameters: TC1, TC1.1, TC1.2, TC1.3</td>
+<td></td>
+<td>0</td>
+<td>com.datadriven.framework.utils.TestDataProvider@3cc1435c</td></tr>
+<tr>
+<td title='com.datadriven.framework.utils.TestDataProvider.sampleTestOne()'><b>sampleTestOne</b><br>Test class: com.datadriven.framework.utils.TestDataProvider<br>Parameters: TC2, TC2.1, TC2.2, TC2.3</td>
+<td></td>
+<td>0</td>
+<td>com.datadriven.framework.utils.TestDataProvider@3cc1435c</td></tr>
+<tr>
+<td title='com.datadriven.framework.utils.TestDataProvider.sampleTestOne()'><b>sampleTestOne</b><br>Test class: com.datadriven.framework.utils.TestDataProvider<br>Parameters: TC3, TC3.1, TC3.2, TC3.3</td>
+<td></td>
+<td>0</td>
+<td>com.datadriven.framework.utils.TestDataProvider@3cc1435c</td></tr>
+<tr>
+<td title='com.datadriven.framework.utils.TestDataProvider.sampleTestOne()'><b>sampleTestOne</b><br>Test class: com.datadriven.framework.utils.TestDataProvider<br>Parameters: TC4, TC4.1, TC4.2, TC4.3</td>
+<td></td>
+<td>0</td>
+<td>com.datadriven.framework.utils.TestDataProvider@3cc1435c</td></tr>
+<tr>
+<td title='com.datadriven.framework.utils.TestDataProvider.sampleTestOne()'><b>sampleTestOne</b><br>Test class: com.datadriven.framework.utils.TestDataProvider<br>Parameters: TC5, TC5.1, TC5.2, TC5.3</td>
+<td></td>
+<td>0</td>
+<td>com.datadriven.framework.utils.TestDataProvider@3cc1435c</td></tr>
+<tr>
+<td title='com.datadriven.framework.utils.TestDataProvider.sampleTestOne()'><b>sampleTestOne</b><br>Test class: com.datadriven.framework.utils.TestDataProvider<br>Parameters: TC6, TC6.1, TC6.2, TC6.3</td>
+<td></td>
+<td>0</td>
+<td>com.datadriven.framework.utils.TestDataProvider@3cc1435c</td></tr>
+<tr>
+<td title='com.datadriven.framework.utils.TestDataProvider.sampleTestOne()'><b>sampleTestOne</b><br>Test class: com.datadriven.framework.utils.TestDataProvider<br>Parameters: TC7, TC7.1, TC7.2, TC7.3</td>
+<td></td>
+<td>0</td>
 <td>com.datadriven.framework.utils.TestDataProvider@3cc1435c</td></tr>
 </table><p>
 </body>

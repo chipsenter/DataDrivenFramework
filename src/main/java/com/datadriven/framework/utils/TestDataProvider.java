@@ -20,7 +20,7 @@ public class TestDataProvider {
 		ReadExcelDataFile readdata = new ReadExcelDataFile(System.getProperty("user.dir")+ "/src/main/java/testData/TestData_Testmanagement.xlsx");
 		
 		String sheetName = "Feature1";
-		String testName = "Test One";
+		String testName = "Test Three";
 		
 		int startRowNum = 0;
 		while(!readdata.getCellData(sheetName, 0, startRowNum).equalsIgnoreCase(testName)) {
@@ -50,12 +50,10 @@ public class TestDataProvider {
 		
 		int dataRowNumber = 0;
 		
-		//for (int rowNumber = startTestRow; rowNumber <= startRowNum + rows; rowNumber++) {
-		for (int i = 0; i < rows; i++) {
-			System.out.println("Inner loop rowNumber is " + i);
+		for (int rowNumber = startTestRow; rowNumber <= startRowNum + rows +1; rowNumber++) {
+			System.out.println("Inner loop rowNumber is " + rowNumber);
 			for (int colNumber = 0; colNumber < columns; colNumber++) {
-				//dataSet[dataRowNumber][colNumber] = readdata.getCellData(sheetName, colNumber, rowNumber);
-				dataSet[dataRowNumber][colNumber] = readdata.getCellData(sheetName, colNumber, (startRowNum + rows) + i);
+				dataSet[dataRowNumber][colNumber] = readdata.getCellData(sheetName, colNumber, rowNumber);
 			
 			}
 			dataRowNumber++;
