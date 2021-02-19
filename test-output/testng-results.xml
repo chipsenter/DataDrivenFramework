@@ -1,195 +1,409 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="0" failed="7" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-02-10T18:34:25 MST" name="Default suite" finished-at="2021-02-10T18:34:26 MST" duration-ms="694">
+  <suite started-at="2021-02-11T13:40:08 MST" name="Default suite" finished-at="2021-02-11T13:41:15 MST" duration-ms="66368">
     <groups>
     </groups>
-    <test started-at="2021-02-10T18:34:25 MST" name="Default test" finished-at="2021-02-10T18:34:26 MST" duration-ms="694">
-      <class name="com.datadriven.framework.utils.TestDataProvider">
-        <test-method signature="sampleTestOne(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.datadriven.framework.utils.TestDataProvider@3cc1435c]" started-at="2021-02-10T18:34:26 MST" name="sampleTestOne" data-provider="getTestData" finished-at="2021-02-10T18:34:26 MST" duration-ms="7" status="PASS">
+    <test started-at="2021-02-11T13:40:08 MST" name="Default test" finished-at="2021-02-11T13:41:15 MST" duration-ms="66368">
+      <class name="com.datadriven.framework.test.LoginTest.LoginTest">
+        <test-method signature="testOne(java.util.Hashtable)[pri:0, instance:com.datadriven.framework.test.LoginTest.LoginTest@14fc5f04]" started-at="2021-02-11T13:40:09 MST" name="testOne" data-provider="getTestOneData" finished-at="2021-02-11T13:40:21 MST" duration-ms="11237" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[TC1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[TC1.1]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[TC1.2]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[TC1.3]]>
+                <![CDATA[{col4=TC1.3, col3=TC1.2, col2=TC1.1, col1=TC1}]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Keys to send should be a not null CharSequence
+at org.testng.Assert.fail(Assert.java:99)
+at com.datadriven.framework.base.BaseUI.reportFail(BaseUI.java:248)
+at com.datadriven.framework.base.BaseUI.enterText(BaseUI.java:120)
+at com.datadriven.framework.test.LoginTest.LoginTest.testOne(LoginTest.java:22)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sampleTestOne -->
-        <test-method signature="sampleTestOne(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.datadriven.framework.utils.TestDataProvider@3cc1435c]" started-at="2021-02-10T18:34:26 MST" name="sampleTestOne" data-provider="getTestData" finished-at="2021-02-10T18:34:26 MST" duration-ms="1" status="PASS">
+        </test-method> <!-- testOne -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.datadriven.framework.test.LoginTest.LoginTest@14fc5f04]" started-at="2021-02-11T13:40:21 MST" name="afterTest" finished-at="2021-02-11T13:40:21 MST" duration-ms="211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method signature="testOne(java.util.Hashtable)[pri:0, instance:com.datadriven.framework.test.LoginTest.LoginTest@14fc5f04]" started-at="2021-02-11T13:40:21 MST" name="testOne" data-provider="getTestOneData" finished-at="2021-02-11T13:40:29 MST" duration-ms="7962" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[TC2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[TC2.1]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[TC2.2]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[TC2.3]]>
+                <![CDATA[{col4=TC2.3, col3=TC2.2, col2=TC2.1, col1=TC2}]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Keys to send should be a not null CharSequence
+at org.testng.Assert.fail(Assert.java:99)
+at com.datadriven.framework.base.BaseUI.reportFail(BaseUI.java:248)
+at com.datadriven.framework.base.BaseUI.enterText(BaseUI.java:120)
+at com.datadriven.framework.test.LoginTest.LoginTest.testOne(LoginTest.java:22)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sampleTestOne -->
-        <test-method signature="sampleTestOne(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.datadriven.framework.utils.TestDataProvider@3cc1435c]" started-at="2021-02-10T18:34:26 MST" name="sampleTestOne" data-provider="getTestData" finished-at="2021-02-10T18:34:26 MST" duration-ms="1" status="PASS">
+        </test-method> <!-- testOne -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.datadriven.framework.test.LoginTest.LoginTest@14fc5f04]" started-at="2021-02-11T13:40:29 MST" name="afterTest" finished-at="2021-02-11T13:40:29 MST" duration-ms="258" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method signature="testOne(java.util.Hashtable)[pri:0, instance:com.datadriven.framework.test.LoginTest.LoginTest@14fc5f04]" started-at="2021-02-11T13:40:29 MST" name="testOne" data-provider="getTestOneData" finished-at="2021-02-11T13:40:38 MST" duration-ms="8905" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[TC3]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[TC3.1]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[TC3.2]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[TC3.3]]>
+                <![CDATA[{col4=TC3.3, col3=TC3.2, col2=TC3.1, col1=TC3}]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Keys to send should be a not null CharSequence
+at org.testng.Assert.fail(Assert.java:99)
+at com.datadriven.framework.base.BaseUI.reportFail(BaseUI.java:248)
+at com.datadriven.framework.base.BaseUI.enterText(BaseUI.java:120)
+at com.datadriven.framework.test.LoginTest.LoginTest.testOne(LoginTest.java:22)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sampleTestOne -->
-        <test-method signature="sampleTestOne(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.datadriven.framework.utils.TestDataProvider@3cc1435c]" started-at="2021-02-10T18:34:26 MST" name="sampleTestOne" data-provider="getTestData" finished-at="2021-02-10T18:34:26 MST" duration-ms="1" status="PASS">
+        </test-method> <!-- testOne -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.datadriven.framework.test.LoginTest.LoginTest@14fc5f04]" started-at="2021-02-11T13:40:38 MST" name="afterTest" finished-at="2021-02-11T13:40:38 MST" duration-ms="162" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method signature="testOne(java.util.Hashtable)[pri:0, instance:com.datadriven.framework.test.LoginTest.LoginTest@14fc5f04]" started-at="2021-02-11T13:40:38 MST" name="testOne" data-provider="getTestOneData" finished-at="2021-02-11T13:40:47 MST" duration-ms="8670" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[TC4]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[TC4.1]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[TC4.2]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[TC4.3]]>
+                <![CDATA[{col4=TC4.3, col3=TC4.2, col2=TC4.1, col1=TC4}]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Keys to send should be a not null CharSequence
+at org.testng.Assert.fail(Assert.java:99)
+at com.datadriven.framework.base.BaseUI.reportFail(BaseUI.java:248)
+at com.datadriven.framework.base.BaseUI.enterText(BaseUI.java:120)
+at com.datadriven.framework.test.LoginTest.LoginTest.testOne(LoginTest.java:22)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sampleTestOne -->
-        <test-method signature="sampleTestOne(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.datadriven.framework.utils.TestDataProvider@3cc1435c]" started-at="2021-02-10T18:34:26 MST" name="sampleTestOne" data-provider="getTestData" finished-at="2021-02-10T18:34:26 MST" duration-ms="2" status="PASS">
+        </test-method> <!-- testOne -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.datadriven.framework.test.LoginTest.LoginTest@14fc5f04]" started-at="2021-02-11T13:40:47 MST" name="afterTest" finished-at="2021-02-11T13:40:47 MST" duration-ms="287" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method signature="testOne(java.util.Hashtable)[pri:0, instance:com.datadriven.framework.test.LoginTest.LoginTest@14fc5f04]" started-at="2021-02-11T13:40:47 MST" name="testOne" data-provider="getTestOneData" finished-at="2021-02-11T13:40:56 MST" duration-ms="8492" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[TC5]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[TC5.1]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[TC5.2]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[TC5.3]]>
+                <![CDATA[{col4=TC5.3, col3=TC5.2, col2=TC5.1, col1=TC5}]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Keys to send should be a not null CharSequence
+at org.testng.Assert.fail(Assert.java:99)
+at com.datadriven.framework.base.BaseUI.reportFail(BaseUI.java:248)
+at com.datadriven.framework.base.BaseUI.enterText(BaseUI.java:120)
+at com.datadriven.framework.test.LoginTest.LoginTest.testOne(LoginTest.java:22)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sampleTestOne -->
-        <test-method signature="sampleTestOne(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.datadriven.framework.utils.TestDataProvider@3cc1435c]" started-at="2021-02-10T18:34:26 MST" name="sampleTestOne" data-provider="getTestData" finished-at="2021-02-10T18:34:26 MST" duration-ms="1" status="PASS">
+        </test-method> <!-- testOne -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.datadriven.framework.test.LoginTest.LoginTest@14fc5f04]" started-at="2021-02-11T13:40:56 MST" name="afterTest" finished-at="2021-02-11T13:40:56 MST" duration-ms="273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method signature="testOne(java.util.Hashtable)[pri:0, instance:com.datadriven.framework.test.LoginTest.LoginTest@14fc5f04]" started-at="2021-02-11T13:40:56 MST" name="testOne" data-provider="getTestOneData" finished-at="2021-02-11T13:41:04 MST" duration-ms="8331" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[TC6]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[TC6.1]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[TC6.2]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[TC6.3]]>
+                <![CDATA[{col4=TC6.3, col3=TC6.2, col2=TC6.1, col1=TC6}]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Keys to send should be a not null CharSequence
+at org.testng.Assert.fail(Assert.java:99)
+at com.datadriven.framework.base.BaseUI.reportFail(BaseUI.java:248)
+at com.datadriven.framework.base.BaseUI.enterText(BaseUI.java:120)
+at com.datadriven.framework.test.LoginTest.LoginTest.testOne(LoginTest.java:22)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sampleTestOne -->
-        <test-method signature="sampleTestOne(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.datadriven.framework.utils.TestDataProvider@3cc1435c]" started-at="2021-02-10T18:34:26 MST" name="sampleTestOne" data-provider="getTestData" finished-at="2021-02-10T18:34:26 MST" duration-ms="1" status="PASS">
+        </test-method> <!-- testOne -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.datadriven.framework.test.LoginTest.LoginTest@14fc5f04]" started-at="2021-02-11T13:41:04 MST" name="afterTest" finished-at="2021-02-11T13:41:05 MST" duration-ms="240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method signature="testOne(java.util.Hashtable)[pri:0, instance:com.datadriven.framework.test.LoginTest.LoginTest@14fc5f04]" started-at="2021-02-11T13:41:05 MST" name="testOne" data-provider="getTestOneData" finished-at="2021-02-11T13:41:14 MST" duration-ms="9589" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[TC7]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[TC7.1]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[TC7.2]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[TC7.3]]>
+                <![CDATA[{col4=TC7.3, col3=TC7.2, col2=TC7.1, col1=TC7}]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Keys to send should be a not null CharSequence
+at org.testng.Assert.fail(Assert.java:99)
+at com.datadriven.framework.base.BaseUI.reportFail(BaseUI.java:248)
+at com.datadriven.framework.base.BaseUI.enterText(BaseUI.java:120)
+at com.datadriven.framework.test.LoginTest.LoginTest.testOne(LoginTest.java:22)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sampleTestOne -->
-      </class> <!-- com.datadriven.framework.utils.TestDataProvider -->
+        </test-method> <!-- testOne -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.datadriven.framework.test.LoginTest.LoginTest@14fc5f04]" started-at="2021-02-11T13:41:14 MST" name="afterTest" finished-at="2021-02-11T13:41:14 MST" duration-ms="214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="endReport()[pri:0, instance:com.datadriven.framework.test.LoginTest.LoginTest@14fc5f04]" started-at="2021-02-11T13:41:14 MST" name="endReport" finished-at="2021-02-11T13:41:15 MST" duration-ms="473" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- com.datadriven.framework.test.LoginTest.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
