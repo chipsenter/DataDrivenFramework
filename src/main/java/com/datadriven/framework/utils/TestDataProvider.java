@@ -53,7 +53,7 @@ public class TestDataProvider {
 		Hashtable<String, String> dataTable = null;
 		int dataRowNumber = 0;
 		
-		for (int rowNumber = startTestRow -1; rowNumber <= startRowNum + rows; rowNumber++) {
+		for (int rowNumber = startTestRow; rowNumber <= startRowNum + rows +1; rowNumber++) {
 			dataTable = new Hashtable<String, String>();
 			//System.out.println("Inner loop rowNumber is " + rowNumber);
 			for (int colNumber = 0; colNumber < columns; colNumber++) {

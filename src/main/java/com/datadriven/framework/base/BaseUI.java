@@ -1,6 +1,5 @@
 package com.datadriven.framework.base;
 
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -26,8 +25,7 @@ import com.aventstack.extentreports.Status;
 import com.datadriven.framework.utils.DateUtils;
 import com.datadriven.framework.utils.ExtentReportManager;
 
-
-public class BaseUI  {
+public class BaseUI {
 
 	public WebDriver driver;
 	public Properties prop;
@@ -89,12 +87,25 @@ public class BaseUI  {
 
 	}
 
+	public void verifyPageTitle(String pageTitle) {
+
+		try {
+			String actualTitle = driver.getTitle();
+			logger.log(Status.INFO, "Actual Title is : " + actualTitle);
+			logger.log(Status.INFO, "Expected Title is : " + pageTitle);
+			Assert.assertEquals(actualTitle, pageTitle);
+		} catch (Exception e) {
+			reportFail(e.getMessage());
+		}
+
+	}
+
 	/****************** Open URL ***********************/
 	public void openURL(String websiteURLKey) {
 		try {
-		driver.get(prop.getProperty(websiteURLKey));
-		reportPass(websiteURLKey + " Identified Succesfully");
-		}catch (Exception e) {
+			driver.get(prop.getProperty(websiteURLKey));
+			reportPass(websiteURLKey + " Identified Succesfully");
+		} catch (Exception e) {
 			reportFail(e.getMessage());
 		}
 	}
@@ -114,8 +125,8 @@ public class BaseUI  {
 	/****************** Enter Text ***********************/
 	public void enterText(String xpathKey, String data) {
 		try {
-		getElement(xpathKey).sendKeys(data);
-		reportPass(data + "Enetered Text Successfully Into Element" + xpathKey);
+			getElement(xpathKey).sendKeys(data);
+			reportPass(data + "Enetered Text Successfully Into Element" + xpathKey);
 		} catch (Exception e) {
 			reportFail(e.getMessage());
 		}
@@ -124,13 +135,13 @@ public class BaseUI  {
 	/****************** Click Element ***********************/
 	public void elementClick(String xpathKey) {
 		try {
-		getElement(xpathKey).click();
-		reportPass(xpathKey + " Element Clicked Successfully");
+			getElement(xpathKey).click();
+			reportPass(xpathKey + " Element Clicked Successfully");
 		} catch (Exception e) {
 			reportFail(e.getMessage());
 		}
 	}
-	
+
 	/****************** Select Elements ***********************/
 	public WebElement getElement(String locatorKey) {
 		WebElement element = null;
@@ -154,9 +165,13 @@ public class BaseUI  {
 		} else if(locatorKey.endsWith("_Name")) {
 			element = driver.findElement(By.name(prop.getProperty(locatorKey)));
 			logger.log(Status.INFO, "Locator Indetified : " + locatorKey);
-		} else if(locatorKey.endsWith("_TagName")) {
-			element = driver.findElement(By.tagName(prop.getProperty(locatorKey)));
+		} else if(locatorKey.endsWith("_Classname")) {
+			element = driver.findElement(By.className(prop.getProperty(locatorKey)));
 			logger.log(Status.INFO, "Locator Indetified : " + locatorKey);
+		}	
+		else if(locatorKey.endsWith("_TagName")) {
+			element = driver.findElement(By.tagName(prop.getProperty(locatorKey)));
+			logger.log(Status.INFO, "Locator Indetified : " + locatorKey);			
 		} else {
 			reportFail("Failing the Testcase, Invalid Locator " + locatorKey);
 			Assert.fail("Failing the Testcase, Invalid Locator " + locatorKey);
@@ -171,106 +186,106 @@ public class BaseUI  {
 		}
 		return element;
 	}
-	
+
 	/****************** Verify Element ***********************/
-	
+
 	public boolean isElementPresent(String locatorKey) {
-		
+
 		try {
-			if(getElement(locatorKey).isDisplayed()){
+			if (getElement(locatorKey).isDisplayed()) {
 				reportPass(locatorKey + " : Element Is Displayed");
 				return true;
 			}
-			
-		}catch (Exception e) {
+
+		} catch (Exception e) {
 			reportFail(e.getMessage());
 		}
-		
-		return false;		
+
+		return false;
 	}
-	
+
 	public boolean isElementSelected(String locatorKey) {
-		
+
 		try {
-			if(getElement(locatorKey).isSelected()){
+			if (getElement(locatorKey).isSelected()) {
 				reportPass(locatorKey + " : Element Is Selected");
 				return true;
 			}
-			
-		}catch (Exception e) {
+
+		} catch (Exception e) {
 			reportFail(e.getMessage());
 		}
-		
-		return false;		
+
+		return false;
 	}
-	
+
 	public boolean isElementEnabled(String locatorKey) {
-		
+
 		try {
-			if(getElement(locatorKey).isEnabled()){
+			if (getElement(locatorKey).isEnabled()) {
 				reportPass(locatorKey + " : Element Is Enabled");
 				return true;
 			}
-			
-		}catch (Exception e) {
+
+		} catch (Exception e) {
 			reportFail(e.getMessage());
 		}
-		
-		return false;		
+
+		return false;
 	}
-	
+
 	/****************** Assertion Functions ***********************/
-	
+
 	public void assertTrue(boolean flag) {
-	
+
 		softAssert.assertTrue(flag);
-	
+
 	}
-	
+
 	public void assertFalse(boolean flag) {
-		
+
 		softAssert.assertFalse(flag);
-	
+
 	}
-	
+
 	public void assertEquals(String actual, String expected) {
-		
+
 		softAssert.assertEquals(actual, expected);
-	
+
 	}
-	
-	
+
 	/****************** Report Functions ***********************/
-	
+
 	public void reportFail(String reportString) {
 		logger.log(Status.FAIL, reportString);
 		takeScreenShotOnFailure();
 		Assert.fail(reportString);
 	}
-	
+
 	public void reportPass(String reportString) {
 		logger.log(Status.PASS, reportString);
 	}
-	
+
 	@AfterMethod
 	public void afterTest() {
 		softAssert.assertAll();
 		driver.quit();
 	}
-	
+
 	public void takeScreenShotOnFailure() {
 		TakesScreenshot takeScreenShot = (TakesScreenshot) driver;
 		File sourceFile = takeScreenShot.getScreenshotAs(OutputType.FILE);
-		
+
 		File destFile = new File(System.getProperty("user.dir") + "/ScreenShots" + DateUtils.getTimeStamp() + ".png");
 		try {
 			FileUtils.copyFile(sourceFile, destFile);
-			logger.addScreenCaptureFromPath(System.getProperty("user.dir") + "/ScreenShots" + DateUtils.getTimeStamp() + ".png");
-			
+			logger.addScreenCaptureFromPath(
+					System.getProperty("user.dir") + "/ScreenShots" + DateUtils.getTimeStamp() + ".png");
+
 		} catch (IOException e) {
-			
+
 			e.printStackTrace();
 		}
-		
+
 	}
 }
